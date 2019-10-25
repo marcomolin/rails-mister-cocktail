@@ -1,17 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
-  </div>
-</div>
+
 
 
 <div class="container">
 <div class="d-flex justify-content-around flex-wrap">
   <% @cocktails.each do |cocktail| %>
     <div class="card my-3" style="width: 18rem;">
-      <img src="https://images.unsplash.com/photo-1455621481073-d5bc1c40e3cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1483&q=80" class="card-img-top" alt="...">
+      <%= cl_image_tag cocktail.photo, alt: "alttext", class:"card-img-top" %>
       <div class="card-body">
         <h5 class="card-title"><%= cocktail.name %></h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -20,6 +14,6 @@
     </div>
   <% end %>
 </div>
-<%= link_to "add new", new_cocktail_path %>
+
 </div>
 
